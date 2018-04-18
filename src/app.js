@@ -15,9 +15,20 @@ var template = (
 
 // Create a templateTwo var JSX expression
 // div
+//  h1 -> Rayyan Ahmed
+//  p  -> Age: 29
+//  p  -> Location: Manhattan
+// Render templateTwo instead of template
 
+var templateTwo = (
+    <div>
+        <h1>Rayyan Ahmed</h1>
+        <p>Age: 29</p>
+        <p>Location: Manhattan</p>
+    </div>
+);
 
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(template, appRoot);
+ReactDOM.render(templateTwo, appRoot);

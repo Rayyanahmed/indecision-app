@@ -13,18 +13,17 @@ var template = (
 )
 ;
 
-// Create a templateTwo var JSX expression
-// div
-//  h1 -> Rayyan Ahmed
-//  p  -> Age: 29
-//  p  -> Location: Manhattan
-// Render templateTwo instead of template
+var user = {
+    name: 'Rayyan',
+    age: 29,
+    location: 'New York'
+}
 
 var templateTwo = (
     <div>
-        <h1>Rayyan Ahmed</h1>
-        <p>Age: 29</p>
-        <p>Location: Manhattan</p>
+        <h1>{user.name}</h1>
+        <p>Age: {user.age}</p>
+        <p>Location: {user.location}</p>
     </div>
 );
 

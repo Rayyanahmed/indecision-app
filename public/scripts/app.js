@@ -32,12 +32,11 @@ var template = React.createElement(
     )
 );
 
-// Create a templateTwo var JSX expression
-// div
-//  h1 -> Rayyan Ahmed
-//  p  -> Age: 29
-//  p  -> Location: Manhattan
-// Render templateTwo instead of template
+var user = {
+    name: 'Rayyan',
+    age: 29,
+    location: 'New York'
+};
 
 var templateTwo = React.createElement(
     'div',
@@ -45,17 +44,19 @@ var templateTwo = React.createElement(
     React.createElement(
         'h1',
         null,
-        'Rayyan Ahmed'
+        user.name
     ),
     React.createElement(
         'p',
         null,
-        'Age: 29'
+        'Age: ',
+        user.age
     ),
     React.createElement(
         'p',
         null,
-        'Location: Manhattan'
+        'Location: ',
+        user.location
     )
 );
 

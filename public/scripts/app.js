@@ -2,6 +2,11 @@
 
 console.log('App.js is running');
 
+var app = {
+    title: 'Indecision App',
+    subtitle: 'This is some info'
+};
+
 // JSX - Javascript XML
 var template = React.createElement(
     'div',
@@ -9,12 +14,12 @@ var template = React.createElement(
     React.createElement(
         'h1',
         null,
-        'Indecision App'
+        'app.title'
     ),
     React.createElement(
         'p',
         null,
-        'This is some info'
+        'app.subtitle'
     ),
     React.createElement(
         'ol',
@@ -31,6 +36,14 @@ var template = React.createElement(
         )
     )
 );
+
+function getLocation(location) {
+    if (location) {
+        return location;
+    } else {
+        return 'Unknown';
+    }
+};
 
 var user = {
     name: 'Rayyan',
@@ -56,7 +69,7 @@ var templateTwo = React.createElement(
         'p',
         null,
         'Location: ',
-        user.location
+        getLocation(user.location)
     )
 );
 

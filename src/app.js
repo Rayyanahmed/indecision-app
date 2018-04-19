@@ -1,15 +1,19 @@
 console.log('App.js is running');
 
+// only render the subtitle (and p tag) if subtitle exists
+// render new p tag - if options.length > 0 "Here are your options" "No options"
+
 var app = {
     title: 'Indecision App',
-    subtitle: 'This is some info'
+    subtitle: 'This is some info',
+    options: ['One', 'Two']
 };
 
-// JSX - Javascript XML
 var template = (
 <div>
-    <h1>app.title</h1>
-    <p>app.subtitle</p>
+    <h1>{app.title}</h1>
+    {app.subtitle && <p>{app.subtitle}</p>}
+    <p>{app.options.length > 0 ? 'Here are your options' : 'No options'}</p>
     <ol>
         <li>Item one</li>
         <li>Item two</li>
@@ -40,4 +44,4 @@ var templateTwo = (
 
 var appRoot = document.getElementById('app');
 
-ReactDOM.render(templateTwo, appRoot);
+ReactDOM.render(template, appRoot);
